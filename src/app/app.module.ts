@@ -3,11 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { StorePageComponent } from './store-page/store-page.component';
+import { GalleryComponent } from './gallery/gallery.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StorePageComponent
+    StorePageComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule
