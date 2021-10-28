@@ -6,6 +6,22 @@ import { Component} from '@angular/core';
   styleUrls: ['./store-page.component.css']
 })
 export class StorePageComponent {
-  constructor() { }
+  numberArray: number[] = [];
 
+  constructor() {
+    this.numberArray = [12, 13, 14,23,29]
+  }
+
+  generateNumbers(){
+    let arr: number[] = []
+    while(arr.length < 5){
+      let r = Math.floor(Math.random() * 36) + 1;
+      if(r > 5){
+        if(arr.indexOf(r) === -1) arr.push(r);
+      }
+    }
+    this.numberArray = arr.sort(function(a:number,b:number){
+      return a - b
+    });
+  }
 }

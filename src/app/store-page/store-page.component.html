@@ -1,1 +1,4 @@
-<p>store-page works!</p>
+<button (click)="generateNumbers()" class="btn-numbers"> New Numbers </button>
+<div class="list-numbers">
+  <p *ngFor="let numbers of numberArray" class="numbers"> {{numbers}}</p>
+</div>

@@ -1,0 +1,22 @@
+.btn-numbers{
+  display: block;
+  width: 80px;
+  height: 40px;
+  border: none;
+  background-color: aquamarine;
+  border-radius: 5px;
+  margin: auto;
+}
+
+.list-numbers{
+  display: flex;
+  padding: 0 350px;
+}
+
+.numbers{
+  display: block;
+  padding: 10px;
+  background-color: aquamarine;
+  border-radius: 50%;
+  margin:15px auto;
+}
