@@ -1,0 +1,33 @@
+.images{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.image{
+  padding: 10px;
+  margin: 10px;
+  border-radius: 8px;
+  border: 2px deepskyblue solid;
+
+}
+
+h1{
+  color: deepskyblue;
+}
+
+hr{
+  border: 1px solid deepskyblue;
+}
+
+input{
+  padding: 5px 0 5px 5px;
+  margin: 10px 0;
+  border: 1px solid deepskyblue;
+}
+
+button{
+  padding: 5px;
+  border: 1px solid deepskyblue;
+  color: deepskyblue;
+}

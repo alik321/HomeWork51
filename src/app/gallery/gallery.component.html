@@ -1,7 +1,7 @@
 <h1> Creative GALLERY </h1>
 <hr/>
 <input name="password" (input)="getPassword($event)"/>
-<button (click)="btn = !btn" [disabled]="password === ''"> Open </button><br/>
+<button (click)="btn = !btn" [disabled]="password === ''"> OPEN </button><br/>
 <form *ngIf="btn">
   <input
     name="image-title"
@@ -15,11 +15,13 @@
     (input)="getImageUrl($event)"
     [value]="urlImage"
   /><br/>
-  <button [disabled]="imageTitle === '' && urlImage === ''" (click)="addImage($event)">ADD image</button>
+  <button [disabled]="imageTitle === '' && urlImage === ''" (click)="addImage($event)">ADD IMAGE</button>
 </form>
 <hr/>
-
-<div *ngFor="let image of images">
-  <img [src]="image.url" width="300px" height="300px">
-  <p>{{image.title}}</p>
+<div class="images">
+  <div *ngFor="let image of images" class="image">
+    <img [src]="image.url" width="300px" height="300px">
+    <p>{{image.title}}</p>
+  </div>
 </div>
+
