@@ -1,1 +1,25 @@
-<p>gallery works!</p>
+<h1> Creative GALLERY </h1>
+<hr/>
+<input name="password" (input)="getPassword($event)"/>
+<button (click)="btn = !btn" [disabled]="password === ''"> Open </button><br/>
+<form *ngIf="btn">
+  <input
+    name="image-title"
+    placeholder="image title"
+    (input)="getImageTitle($event)"
+    [value]="imageTitle"
+  /><br/>
+  <input
+    name="image-URL"
+    placeholder="image URL"
+    (input)="getImageUrl($event)"
+    [value]="urlImage"
+  /><br/>
+  <button [disabled]="imageTitle === '' && urlImage === ''" (click)="addImage($event)">ADD image</button>
+</form>
+<hr/>
+
+<div *ngFor="let image of images">
+  <img [src]="image.url" width="300px" height="300px">
+  <p>{{image.title}}</p>
+</div>
